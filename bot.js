@@ -86,8 +86,6 @@ client.on("message", (message) => {
 		message.guild.member(client.user).setNickname('Trashy Bot');
             client.user.setAvatar("https://cdn.discordapp.com/attachments/474340568474976256/474363749789335552/depositphotos_69083153-stock-photo-steel-trash-can-isolated-on.jpg");
             message.channel.send("TEST");
-            setTimeout( () => {
-                message.channel.bulkDelete(2);
 	    }
 });
 
