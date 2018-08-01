@@ -49,7 +49,7 @@ client.on("message", (message) => {
     message.channel.send("pong.");
 	    } else
 	  if (message.content.startsWith(prefix + "8ball")) {
-			message.reply('the answer is ' + doMagic8BallVoodoo());
+			message.reply('The answer is ' + doMagic8BallVoodoo());
   }
 });
 
