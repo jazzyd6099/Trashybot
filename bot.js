@@ -87,7 +87,7 @@ client.on("message", (message) => {
             if(message.mentions.users.size < 1) return message.reply("You forgot to mention someone for me to trashtalk.");
             message.channel.send("Fucking bitch, you weirdass hoe. :unamused:" + trashtalkedUser);
 		} else
-		if (message.content == "roll")) {
+		if (message.content == "roll") {
 			message.channel.send({embed: {
                     color: embedRed,
                     title: "You rolled...",
