@@ -56,6 +56,12 @@ client.on("message", (message) => {
 	    } else
 	  if (message.content.startsWith(prefix + "8ball")) {
 			message.reply('The answer is ' + doMagic8BallVoodoo());
+	  } else
+			if (message.content.startsWith(prefix + "trashtalk")) {
+				let trashtalkedUser = message.mentions.users.first();
+            
+            if(message.mentions.users.size < 1) return message.reply("You fucking forgot to mention someone for me to trashtalk.");
+            message.channel.send("Fucking bitch, you weirdass hoe. :unamused:" + trashtalkedUser);
   }
 });
 
