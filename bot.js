@@ -43,7 +43,7 @@ client.on('guildMemberAdd', member => {
 	if (message.content.startsWith("i'm trash")) {
 		message.channel.send("No, i'm trash.")
 	} else
-		if (message.content.startsWith("hey trashybot")) {
+	if (message.content == "Hey trashybot".toLowerCase() || message.content == "hey trashybot".toLowerCase() ||  message.content == "Hey trashybot!".toLowerCase()){
 			message.reply("Wassup lil bitch!");
 		}
   });
