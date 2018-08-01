@@ -2,6 +2,14 @@ const Discord = require("discord.js");
 
 const client = new Discord.Client();
 
+var x = [
+    1,
+    2,
+    3,
+    4,
+    5,
+]
+
 var output = x[Math.floor(Math.random()*x.length)];
 
 function doMagic8BallVoodoo() {
