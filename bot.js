@@ -48,7 +48,7 @@ client.on("message", (message) => {
   if (message.content.startsWith(prefix + "ping")) {
     message.channel.send("pong.");
 	    } else
-	  if (message.content.startsWith(prefix + "give me a nickname")) {
+	  if (message.content.startsWith(prefix + "am i okay?")) {
 			message.reply(doMagic8BallVoodoo());
   }
 });
