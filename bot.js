@@ -42,6 +42,9 @@ client.on('guildMemberAdd', member => {
   client.on("message", (message) => {
 	if (message.content.startsWith("i'm trash")) {
 		message.channel.send("No, i'm trash.")
+	} else
+		if (message.content.startsWith("hey trashybot")) {
+			message.reply("Wassup lil bitch!");
 		}
   });
 const prefix = "!";
