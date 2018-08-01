@@ -4,25 +4,25 @@ const client = new Discord.Client();
 
 function doMagic8BallVoodoo() {
     var rand = [
-    "Yes",
-    "No.",
-    "It is possible.",
-    "Maybe.",
-    "Eh.",
-    "Nah, come back next time.",
+    "yes.",
+    "no.",
+    "it is possible.",
+    "maybe.",
+    "eh.",
+    "nah, come back next time.",
     "I don't care.",
-    "Maybe not.",
-    "Probably.",
-    "Probably not.",
-    "Nah.",
-    "It's a mystery.",
-    "The world may never know.",
+    "maybe not.",
+    "probably.",
+    "probably not.",
+    "nah.",
+    "it's a mystery.",
+    "the world may never know.",
     "I don't know.",
-    "What?",
+    "what?",
     "I cannot answer that.",
-    "How would I know?",
-    "Ah.. No.",
-    "How the fuck do I answer this?!",
+    "how would I know?",
+    "ah.. No.",
+    "how the fuck do I answer this?!",
 ];
 
     return rand[Math.floor(Math.random()*rand.length)];
@@ -49,7 +49,7 @@ client.on("message", (message) => {
     message.channel.send("pong.");
 	    } else
 	  if (message.content.startsWith(prefix + "8ball")) {
-			message.reply('Your answer is ' + doMagic8BallVoodoo());
+			message.reply('the answer is ' + doMagic8BallVoodoo());
   }
 });
 
