@@ -37,7 +37,7 @@ client.on("ready", () => {
 	
 });
 client.on('guildMemberAdd', member => {
-    member.guild.channels.get('channelID').send("Welcome to RandomShit. If you want to know the commands for me go to the text channel: #bot-commands. Enjoy the discord server."); 
+    member.guild.channels.get('474327704280367154').send("Welcome to RandomShit. If you want to know the commands for me go to the text channel: #bot-commands. Enjoy the discord server."); 
 });
   client.on("message", (message) => {
 	if (message.content.startsWith("i'm trash")) {
