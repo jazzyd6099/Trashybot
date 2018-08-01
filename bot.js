@@ -86,7 +86,6 @@ client.on("message", (message) => {
             message.channel.send("TEST");
             setTimeout( () => {
                 message.channel.bulkDelete(2);
-  }
 });
 
 client.login(process.env.BOT_TOKEN);
