@@ -92,7 +92,6 @@ client.on("message", (message) => {
                     color: embedRed,
                     title: "You rolled...",
                     description: Math.floor(Math.random() * 6) + 1,  
-		}
   }
 });
 
