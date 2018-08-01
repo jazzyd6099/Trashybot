@@ -36,6 +36,9 @@ client.on("ready", () => {
   .catch(console.error);
 	
 });
+client.on('guildMemberAdd', member => {
+    member.guild.channels.get('channelID').send("Welcome to RandomShit. If you want to know the commands for me go to the text channel: #bot-commands. Enjoy the discord server."); 
+});
   client.on("message", (message) => {
 	if (message.content.startsWith("i'm trash")) {
 		message.channel.send("No, i'm trash.")
