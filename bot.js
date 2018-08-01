@@ -2,28 +2,6 @@ const Discord = require("discord.js");
 
 const client = new Discord.Client();
 
-//embedColors
-
-const embedRed = 0xff0000
-const embedOrange = 0xff790c
-const embedYellow = 0xffff00
-const embedGreen = 0x00ff00
-const embedBlue = 0x0064ff
-const embedPurple = 0x6a00b0
-const embedMagenta = 0x9600ff
-const embedPink = 0xff00ff
-const embedBlack = 0x000000
-const embedWhite = 0xffffff
-const embedGray = 0x777777
-
-var x = [
-    1,
-    2,
-    3,
-    4,
-    5,
-]
-
 var output = x[Math.floor(Math.random()*x.length)];
 
 function doMagic8BallVoodoo() {
@@ -87,11 +65,9 @@ client.on("message", (message) => {
             if(message.mentions.users.size < 1) return message.reply("You forgot to mention someone for me to trashtalk.");
             message.channel.send("Fucking bitch, you weirdass hoe. :unamused:" + trashtalkedUser);
 		} else
-		if (message.content == "roll") {
-			message.channel.send({embed: {
-                    color: embedRed,
-                    title: "You rolled...",
-                    description: Math.floor(Math.random() * 6) + 1,  
+	if (message.content.startsWith(prefix + "roll")) {
+		 var roll = Math.floor(Math.random() * 6) + 1;
+   		 message.reply("You rolled a " + roll);
   }
 });
 
