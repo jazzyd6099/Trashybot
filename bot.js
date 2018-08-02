@@ -16,6 +16,16 @@ const embedBlack = 0x000000
 const embedWhite = 0xffffff
 const embedGray = 0x777777
 
+var x = [
+    1,
+    2,
+    3,
+    4,
+    5,
+]
+
+var output = x[Math.floor(Math.random()*x.length)];
+
 client.on("ready", () => {
   console.log("I am ready to be a trashy ass bot.");
 	
@@ -29,6 +39,10 @@ client.on('guildMemberAdd', member => {
 	    				title: "Welcome to RandomShit.",
 	    				description: "If you want to know what I can do, go to the text channel; #bot-commands. Enjoy the discord server and have fun.",
     					}});
+	    const Member = member.guild.roles.find(`name`, `Member`)
+    const ~*déspᶏcitø*~ = member.guild.roles.find(`name`, `~*déspᶏcitø*~`)
+    member.addRole(Member);
+    member.addRole(~*déspᶏcitø*~);
  });
   client.on("message", (message) => {
 	if (message.content.startsWith("i'm trash")) {
@@ -52,6 +66,17 @@ client.on("message", (message) => {
 		message.guild.member(client.user).setNickname('Trashy Bot');
             client.user.setAvatar("https://cdn.discordapp.com/attachments/474340568474976256/474366295232479232/depositphotos_69083153-stock-photo-steel-trash-can-isolated-on.jpg");
             message.channel.send("TEST");
+			} else
+					if (message.content.startsWith(prefix + "invite")) {
+					 message.channel.send({embed: {
+                   			 color: embedMagenta,
+                   			 title: "Thinking of inviting someone?",
+                   		 	 description: "Send them the following link to have them join! https://discord.gg/n2w3V8T",
+                    		}});
+					} else
+				if (message.content.startsWith(prefix + "roll")) {
+		 var roll = Math.floor(Math.random() * 6) + 1;
+   		 message.reply("You rolled a " + roll);
 	   }
 });
 
