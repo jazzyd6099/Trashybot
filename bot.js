@@ -41,9 +41,9 @@ client.on('guildMemberAdd', member => {
     					}});
 	
 	    const Member = member.guild.roles.find(`name`, `Member`)
-    const Server Beta Tester = member.guild.roles.find(`name`, `Server Beta Tester`)
+    const Newbie = member.guild.roles.find(`name`, `Newbie`)
     member.addRole(Member);
-    member.addRole(Server Beta Tester);
+    member.addRole(Newbie);
  });
   client.on("message", (message) => {
 	if (message.content.startsWith("i'm trash")) {
