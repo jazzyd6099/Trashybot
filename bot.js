@@ -79,11 +79,7 @@ client.on("message", (message) => {
     message.channel.send("pong.");
 	    } else
 	  if (message.content.startsWith(prefix + "8ball")) {
-		  message.channel.send({embed: {
-                    color: embedRed,
-                    title: "Hmmm...",
-                    description: (fortunes[Math.floor(Math.random() * fortunes.length)]),
-                    }});
+			message.reply("your answer is" + doMagic8BallVoodoo());
 	  } else
 			if (message.content.startsWith(prefix + "trashtalk")) {
 				let trashtalkedUser = message.mentions.users.first();
