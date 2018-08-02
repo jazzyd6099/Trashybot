@@ -78,7 +78,7 @@ client.on("message", (message) => {
 					if (message.content.startsWith(prefix + "roll")) {
 					  message.channel.send({embed: {
                   			  color: embedGray,
-                  			  title: "You rolled...",
+                  			  title: "You rolled a...",
                   		 	 description: Math.floor(Math.random() * 6) + 1,
                  		   }});
 	   }
