@@ -86,8 +86,8 @@ if (message.author.bot) return;
 	  } else
 		  if (message.content.startsWith(prefix + "clear")) {
 		 	 if (args[0])message.channel.send("Invalid.");
-				message.channel.bulkDelete(args[0]).then(() => {
-			  message.channel.send("Cleared ${args[0]} messages.").then(message => message.delete(5000));
+				message.channel.bulkDelete(args[1]).then(() => {
+			  message.channel.send("Cleared ${args[1]} messages.").then(message => message.delete(5000));
 		  });
 		  } else
 		  	if (message.content.startsWith(prefix + "trashtalk")) {
