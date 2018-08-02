@@ -86,7 +86,7 @@ client.on("message", (message) => {
     message.channel.send("pong.");
 		  } else
   		  if (message.content.startsWith(prefix + "clear")) {
-  		 	 if (args[0])message.channel.send("Invalid.");
+  		 	 if (args[0])message.channel.send("Clearing...");
   				message.channel.bulkDelete(args[0]).then(() => {
   			  message.channel.send("Cleared those dirtyass messages.").then(message => message.delete(5000));
 			});
