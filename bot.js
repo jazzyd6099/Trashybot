@@ -26,6 +26,29 @@ var x = [
 
 var output = x[Math.floor(Math.random()*x.length)];
 
+var fortunes = [
+    "Yes.",
+    "It is certain.",
+    "It is decidedly so.",
+    "Without a doubt.",
+    "Yes definelty.",
+    "You may rely on it.",
+    "As I see it, yes.",
+    "Most likely.",
+    "Outlook good.",
+    "Signs point to yes.",
+    "Reply hazy, try again.",
+    "Ask again later.",
+    "Better not tell you now...",
+    "Cannot predict now.",
+    "Concentrate and ask again.",
+    "Don't count on it.",
+    "My reply is no.",
+    "My sources say no.",
+    "Outlook not so good...",
+    "Very doubtful.",
+];
+
 client.on("ready", () => {
   console.log("I am ready to be a trashy ass bot.");
 	
@@ -81,6 +104,20 @@ client.on("message", (message) => {
                   			  title: "You rolled a...",
                   		 	 description: Math.floor(Math.random() * 6) + 1,
                  		   }});
+					} else
+					 if (message.content.startsWith(prefix + "8ball")) {
+						 if (args[1]) {
+        		        message.channel.send({embed: {
+            		        color: embedRed,
+            		        title: "Hmmm...",
+                  		description: (fortunes[Math.floor(Math.random() * fortunes.length)]),
+                    }});
+			 else {
+               			 message.channel.send({embed: {
+                  		  color: embedRed,
+                  		  title: "Oof.",
+                   		 description: "The usage of this command is: **!8ball [Question]**",
+                    }});
 			}
 });
 
