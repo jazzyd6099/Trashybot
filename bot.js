@@ -74,6 +74,7 @@ client.on('guildMemberAdd', member => {
 	}
   });
 client.on("message", (message) => {	
+if (message.author.bot) return;
  if (message.content.indexOf(config.prefix) !== 0) return;
   const prefix = "!";
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
