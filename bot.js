@@ -108,11 +108,12 @@ client.on("message", (message) => {
 					 if (message.content.startsWith(prefix + "8ball")) {
 						 if (args[1]) {
         		        message.channel.send({embed: {
-            		        color: embedRed,
+            		        color: embedGray,
             		        title: "Hmmm...",
                   		description: (fortunes[Math.floor(Math.random() * fortunes.length)]),
                     }});
-			 else {
+						 } else
+					 if (args[0]) {
                			 message.channel.send({embed: {
                   		  color: embedRed,
                   		  title: "Oof.",
