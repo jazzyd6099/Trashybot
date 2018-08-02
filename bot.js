@@ -75,7 +75,11 @@ client.on('guildMemberAdd', member => {
   });
 const prefix = "!";
 client.on("message", (message) => {
-
+  if (message.author.bot) return;
+   if (message.content.indexOf(config.prefix) !== 0) return;
+    const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
+	
   if (!message.content.startsWith(prefix)) return;
 	
   if (message.content.startsWith(prefix + "ping")) {
