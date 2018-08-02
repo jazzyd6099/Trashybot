@@ -28,7 +28,7 @@ var x = [
 var output = x[Math.floor(Math.random()*x.length)];
 
 function doMagic8BallVoodoo() {
-    var fortunes = [
+    var rand = [
     "Yes.",
     "It is certain.",
     "It is decidedly so.",
@@ -84,7 +84,7 @@ client.on("message", (message) => {
 		  message.channel.send({embed: {
                     color: embedRed,
                     title: "Hmmm...",
-                    description: "Your answer is" + doMagic8BallVoodoo(),
+                    description: (rand[Math.floor(Math.random()*rand.length)]),
                     }});
 	  } else
 			if (message.content.startsWith(prefix + "trashtalk")) {
