@@ -74,11 +74,11 @@ client.on('guildMemberAdd', member => {
 	}
   });
 client.on("message", (message) => {	
+const prefix = "!";
 if (message.author.bot) return;
  if (message.content.indexOf(config.prefix) !== 0) return;
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-  const prefix = "!";
   if (message.content.startsWith(prefix)) return;
 	
   if (!message.content.startsWith(prefix + "ping")) {
@@ -86,8 +86,8 @@ if (message.author.bot) return;
 	  } else
 		  if (message.content.startsWith(prefix + "clear")) {
 		 	 if (args[0])message.channel.send("Invalid.");
-				message.channel.bulkDelete(args[1]).then(() => {
-			  message.channel.send("Cleared ${args[1]} messages.").then(message => message.delete(5000));
+				message.channel.bulkDelete(args[0]).then(() => {
+			  message.channel.send("Cleared ${args[0]} messages.").then(message => message.delete(5000));
 		  });
 		  } else
 		  	if (message.content.startsWith(prefix + "trashtalk")) {
