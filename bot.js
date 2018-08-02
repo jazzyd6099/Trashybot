@@ -73,15 +73,14 @@ client.on('guildMemberAdd', member => {
 		message.channel.send("No, i'm trash.")
 	}
   });
- if (message.content.indexOf(config.prefix) !== 0) return;
-
+  const prefix = "!";
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
 client.on("message", (message) => {
-  if (!message.content.startsWith(prefix)) return;
+  if (message.content.startsWith(prefix)) return;
 	
-  if (message.content.startsWith(prefix + "ping")) {
+  if (!message.content.startsWith(prefix + "ping")) {
     message.channel.send("pong.");
 	  } else
 		  if (message.content.startsWith(prefix + "clear")) {
