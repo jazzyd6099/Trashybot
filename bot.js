@@ -29,25 +29,26 @@ var output = x[Math.floor(Math.random()*x.length)];
 
 function doMagic8BallVoodoo() {
     var rand = [
-    "yes.",
-    "no.",
-    "it is possible.",
-    "maybe.",
-    "eh.",
-    "nah, come back next time.",
-    "I don't care.",
-    "maybe not.",
-    "probably.",
-    "probably not.",
-    "nah.",
-    "it's a mystery.",
-    "the world may never know.",
-    "I don't know.",
-    "what?",
-    "I cannot answer that.",
-    "how would I know?",
-    "ah.. No.",
-    "how the fuck do I answer this?!",
+    "Yes.",
+    "It is certain.",
+    "It is decidedly so.",
+    "Without a doubt.",
+    "Yes definelty.",
+    "You may rely on it.",
+    "As I see it, yes.",
+    "Most likely.",
+    "Outlook good.",
+    "Signs point to yes.",
+    "Reply hazy, try again.",
+    "Ask again later.",
+    "Better not tell you now...",
+    "Cannot predict now.",
+    "Concentrate and ask again.",
+    "Don't count on it.",
+    "My reply is no.",
+    "My sources say no.",
+    "Outlook not so good...",
+    "Very doubtful.",
 ];
 
     return rand[Math.floor(Math.random()*rand.length)];
@@ -80,7 +81,11 @@ client.on("message", (message) => {
     message.channel.send("pong.");
 	    } else
 	  if (message.content.startsWith(prefix + "8ball")) {
-			message.reply('The answer is ' + doMagic8BallVoodoo());
+		  message.channel.send({embed: {
+                    color: embedRed,
+                    title: "Hmmm...",
+                    description: doMagic8BallVoodoo()),
+                    }});
 	  } else
 			if (message.content.startsWith(prefix + "trashtalk")) {
 				let trashtalkedUser = message.mentions.users.first();
