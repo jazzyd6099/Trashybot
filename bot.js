@@ -39,10 +39,11 @@ client.on('guildMemberAdd', member => {
 	    				title: "Welcome to RandomShit.",
 	    				description: "If you want to know what I can do, go to the text channel; #bot-commands. Enjoy the discord server and have fun.",
     					}});
+	
 	    const Member = member.guild.roles.find(`name`, `Member`)
-    const ~*déspᶏcitø*~ = member.guild.roles.find(`name`, `~*déspᶏcitø*~`)
+    const Server Beta Tester = member.guild.roles.find(`name`, `Server Beta Tester`)
     member.addRole(Member);
-    member.addRole(~*déspᶏcitø*~);
+    member.addRole(Server Beta Tester);
  });
   client.on("message", (message) => {
 	if (message.content.startsWith("i'm trash")) {
