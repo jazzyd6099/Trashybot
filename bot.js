@@ -86,6 +86,13 @@ client.on("message", (message) => {
 		message.guild.member(client.user).setNickname('Trashy Bot');
             client.user.setAvatar("https://cdn.discordapp.com/attachments/474340568474976256/474366295232479232/depositphotos_69083153-stock-photo-steel-trash-can-isolated-on.jpg");
             message.channel.send("TEST");
+			} else
+				if (message.content.startsWith(prefix + "invite")) {
+					 message.channel.send({embed: {
+                   			 color: #FF00FF,
+                   			 title: "Thinking of inviting someone?",
+                   		 	 description: "Send them the following link to have them join! https://discord.gg/n2w3V8T",
+                    		}});
 	   }
 });
 
