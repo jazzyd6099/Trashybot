@@ -112,15 +112,7 @@ client.on("message", (message) => {
             		        title: "Hmmm...",
                   		description: (fortunes[Math.floor(Math.random() * fortunes.length)]),
                     }});
-				} else
-					if (message.content.startsWith(prefix + "8ball")) {
-					 if (args[0]) {
-               			 message.channel.send({embed: {
-                  		  color: embedRed,
-                  		  title: "Oof.",
-                   		 description: "The usage of this command is: **!8ball [Question]**",
-                    }});
-			}
+		}
 });
 
 client.login(process.env.BOT_TOKEN);
