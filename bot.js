@@ -2,6 +2,21 @@ const Discord = require("discord.js");
 
 const client = new Discord.Client();
 
+//embedColors
+
+const embedRed = 0xff0000
+const embedOrange = 0xff790c
+const embedYellow = 0xffff00
+const embedGreen = 0x00ff00
+const embedBlue = 0x0064ff
+const embedPurple = 0x6a00b0
+const embedMagenta = 0x9600ff
+const embedPink = 0xff00ff
+const embedBlack = 0x000000
+const embedWhite = 0xffffff
+const embedGray = 0x777777
+
+
 var x = [
     1,
     2,
@@ -89,10 +104,14 @@ client.on("message", (message) => {
 			} else
 				if (message.content.startsWith(prefix + "invite")) {
 					 message.channel.send({embed: {
-                   			 color: #FF00FF,
+                   			 color: embedMagenta,
                    			 title: "Thinking of inviting someone?",
                    		 	 description: "Send them the following link to have them join! https://discord.gg/n2w3V8T",
                     		}});
+					break;
+				} else
+					if (message.content.startsWith(prefix + "hi")) {
+						message.reply("Hey.");
 	   }
 });
 
