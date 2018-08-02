@@ -83,7 +83,7 @@ client.on("message", (message) => {
 	  } else
 			if (message.content.startsWith(prefix + "trashtalk")) {
 				let trashtalkedUser = message.mentions.users.first();
-			} else
+				
             if(message.mentions.users.size < 1) return message.reply("You forgot to mention someone for me to trashtalk.");
             message.channel.send("Fucking bitch, you weirdass hoe. :unamused:" + trashtalkedUser);
 		} else
