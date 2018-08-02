@@ -84,7 +84,7 @@ client.on("message", (message) => {
 		  message.channel.send({embed: {
                     color: embedRed,
                     title: "Hmmm...",
-                    description: (fortunes[Math.floor(Math.random() * fortunes.length)]),
+                    description: "Your answer is" + doMagic8BallVoodoo(),
                     }});
 	  } else
 			if (message.content.startsWith(prefix + "trashtalk")) {
