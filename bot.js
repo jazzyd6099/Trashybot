@@ -75,9 +75,12 @@ client.on("message", (message) => {
                    		 	 description: "Send them the following link to have them join! https://discord.gg/n2w3V8T",
                     		}});
 					} else
-				if (message.content.startsWith(prefix + "roll")) {
-		 var roll = Math.floor(Math.random() * 6) + 1;
-   		 message.reply("You rolled a " + roll);
+					if (message.content.startsWith(prefix + "roll")) {
+					  message.channel.send({embed: {
+                  			  color: embedGray,
+                  			  title: "You rolled...",
+                  		 	 description: Math.floor(Math.random() * 6) + 1,
+                 		   }});
 	   }
 });
 
