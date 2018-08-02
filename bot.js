@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
+
 const client = new Discord.Client();
-const config = require("./config.json");
 
 //embedColors
 
@@ -74,9 +74,9 @@ client.on('guildMemberAdd', member => {
 	}
   });
 const prefix = "!";
-client.on("message", (message) => {	
-	
-  if (message.content.startsWith(prefix)) return;
+client.on("message", (message) => {
+  // Exit and stop if it's not there
+  if (!message.content.startsWith(prefix)) return;
 	
   if (!message.content.startsWith(prefix + "ping")) {
     message.channel.send("pong.");
