@@ -86,8 +86,9 @@ client.on("message", (message) => {
     message.channel.send("pong.");
 		  } else
   		  if (message.content.startsWith(prefix + "clear")) {
-  		 	 if (args[0])message.channel.send("Clearing...");
-  				message.channel.bulkDelete(args[0]).then(() => {
+			  if (isNaN(args[0])) return message.channel.send("Please supply a valid amount to clear messages.");
+			  if (args[0] > 100) return message.channel.send("Supply an amount less than 100!");
+			  	message.channel.bulkDelete(args[0]).then(() => {
   			  message.channel.send("Cleared those dirtyass messages.").then(message => message.delete(5000));
 			});
 				} else
