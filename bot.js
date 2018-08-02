@@ -85,6 +85,7 @@ client.on("message", (message) => {
   		 	 if (args[0])message.channel.send("Invalid.");
   				message.channel.bulkDelete(args[0]).then(() => {
   			  message.channel.send("Cleared ${args[0]} messages.").then(message => message.delete(5000));
+			});
 				} else
 		  	if (message.content.startsWith(prefix + "trashtalk")) {
 			let trashtalkedUser = message.mentions.users.first();
