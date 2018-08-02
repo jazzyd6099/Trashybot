@@ -106,7 +106,6 @@ client.on("message", (message) => {
                  		   }});
 					} else
 					 if (message.content.startsWith(prefix + "8ball")) {
-						 if (args[1]) {
         		        message.channel.send({embed: {
             		        color: embedGray,
             		        title: "Hmmm...",
