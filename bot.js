@@ -123,6 +123,9 @@ client.on("message", (message) => {
             		        title: "Hmmm...",
                   		description: (fortunes[Math.floor(Math.random() * fortunes.length)]),
                     }});
+					 } else
+						 if (message.content.startsWith(prefix + "hi")) {
+							 message.reply("Hello.");
 		}
 });
 
