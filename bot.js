@@ -12,6 +12,11 @@ client.on("ready", () => {
 client.on('guildMemberAdd', member => {
     member.guild.channels.get('474327704280367154').send("Welcome to RandomShit. If you want to know the commands for me go to the text channel; #bot-commands. Enjoy the discord server and have fun.");
  });
+  client.on("message", (message) => {
+	if (message.content.startsWith("i'm trash")) {
+		message.channel.send("No, i'm trash.")
+	}
+  });
 const prefix = "!";
 client.on("message", (message) => {
   if (!message.content.startsWith(prefix)) return;
