@@ -28,7 +28,7 @@ var x = [
 var output = x[Math.floor(Math.random()*x.length)];
 
 function doMagic8BallVoodoo() {
-    var fortunes = [
+    var rand = [
     "Yes.",
     "It is certain.",
     "It is decidedly so.",
@@ -51,6 +51,7 @@ function doMagic8BallVoodoo() {
     "Very doubtful.",
 ];
 
+	    return rand[Math.floor(Math.random()*rand.length)];
 
 client.on("ready", () => {
   console.log("I am ready to be a trashy ass bot.");
