@@ -21,6 +21,7 @@ client.on("message", (message) => {
 				
             if(message.mentions.users.size < 1) return message.reply("You forgot to mention someone for me to trashtalk.");
             message.channel.send("Fucking bitch, you weirdass hoe. :unamused:" + trashtalkedUser);
+			} else
 	  		if (message.content.startsWith(prefix + "turn back")) {
 		message.guild.member(client.user).setNickname('Trashy Bot');
             client.user.setAvatar("https://cdn.discordapp.com/attachments/474340568474976256/474366295232479232/depositphotos_69083153-stock-photo-steel-trash-can-isolated-on.jpg");
