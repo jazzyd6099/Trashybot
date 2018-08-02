@@ -108,7 +108,6 @@ client.on("message", (message) => {
                    			 title: "Thinking of inviting someone?",
                    		 	 description: "Send them the following link to have them join! https://discord.gg/n2w3V8T",
                     		}});
-					break;
 				} else
 					if (message.content.startsWith(prefix + "hi")) {
 						message.reply("Hey.");
