@@ -123,7 +123,7 @@ client.on("message", (message) => {
            		 message.channel.send({embed: {
 		    		color: embedYellow,
 		    		title: "trashtalkedUser",
-		    		description: (fortunes[Math.floor(Math.random() * fortunes.length)]),
+		    		description: (trashtalk[Math.floor(Math.random() * trashtalk.length)]),
 	    }});
 			} else
 	  		if (message.content.startsWith(prefix + "turn back")) {
