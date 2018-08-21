@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./config.json");
 const prefix = "!";
+const version = "BETA"
 
 //embedColors
 
@@ -136,6 +137,14 @@ client.on("message", (message) => {
 	    				title: "Welcome to Rainbow Planet.",
 	    				description: "If you want to know what I can do, go to the text channel; #bot-commands. Enjoy the discord server and have fun.",
     					}});
+							 } else
+								 if (message.content == "info"){
+								  message.channel.send({embed: {
+           						 	  color: 0xf50107,
+          						          title: "Currently in latest version.",
+        						          description: "(Version " + version + ")",
+            }});
+						
 		}
 });
 
