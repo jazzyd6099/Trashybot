@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./config.json");
+const talkedRecently = new Set();
 
 //embedColors
 
@@ -62,6 +63,17 @@ client.on('guildMemberAdd', member => {
 	    				title: "Welcome to Rainbow Planet.",
 	    				description: "If you want to know what I can do, go to the text channel; #bot-commands. Enjoy the discord server and have fun.",
     					}});
+	if (talkedRecently.has(message.author.id))
+  return;
+
+// Adds the user to the set so that they can't talk for 2.5 seconds
+talkedRecently.add(message.author.id);
+setTimeout(() => {
+	message.channel.send("You have been using the commands too much! Take a break.");
+  // Removes the user from the set after 2.5 seconds
+  talkedRecently.delete(message.author.id);
+}, 2500);
+});
 	
 	    const Member = member.guild.roles.find(`name`, `Member`)
     const Newbie = member.guild.roles.find(`name`, `Newbie`)
