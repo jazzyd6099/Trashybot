@@ -198,6 +198,15 @@ client.on("message", (message) => {
 												// LIMITED EDITION COMMANDS
 										if (message.content.startsWith(prefix + "fuck")) {
 												 message.channel.send("HEY, NO FUCKING SWEARING IN THIS FUCKING SERVER GODDAMMIT!");
+										} else
+											if (message.content.startsWith(prefix + "admin")) {
+												message.reply("Nice try, but no.");
+											} else
+												if (message.content.startsWith(prefix + "roles")) {
+													message.reply("There is too many to say but if you want the art club title or despacito, ask one of the admins!");
+												} else 
+													if (message.content.startsWith(prefix + "am i okay")) {
+														message.reply("Probably not.");
 	
 			 }
 						
