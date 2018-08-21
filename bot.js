@@ -106,7 +106,19 @@ client.on('guildMemberAdd', member => {
     				message.reply("I'm sorry that my brutal honesty inconvenienced your ego.");
 			  } else
 				  if (message.content == "Hewwo, i'm Twashybwot. It's noice to mweet you >w<") {
-					  message.channel.send("I want to fucking die now.");
+					  message.channel.send("I want to fucking die now."); 
+				  } else
+					  if (message.content == "HEY, NO FUCKING SWEARING IN THIS FUCKING SERVER GODDAMMIT!") {
+						  message.channel.send("HEY! DON'T FUCKING SWEAR!");
+					  } else
+						  if (message.content == "HEY! DON'T FUCKING SWEAR!") {
+							  message.channel.send("FUCK NO FUCK OFF OLD MAN");
+						  } else
+							  if (message.content == "FUCK NO FUCK OFF OLD MAN") {
+							  	message.channel.send("WE'RE THE SAME FUCKING PERSON HOW AM I AN OLD MAN?");
+							  } else
+								  if (message.content == "WE'RE THE SAME FUCKING PERSON HOW AM I AN OLD MAN?") {
+										  message.channel.send("shit u right");
 	}
   });
 client.on("message", (message) => {
@@ -181,11 +193,12 @@ client.on("message", (message) => {
 									 } else
 										 		if (message.content.startsWith(prefix + "hug")) {
 												let huggedUser = message.mentions.users.first();
-				
           							  if(message.mentions.users.size < 1) return message.reply("You forgot to mention someone to hug!");
            										 message.reply( "hugged " + huggedUser);
-										} else
-											
+												});
+												// LIMITED EDITION COMMANDS
+										if (message.content.startsWith(prefix + "fuck")) {
+												 message.reply("HEY, NO FUCKING SWEARING IN THIS FUCKING SERVER GODDAMMIT!");
 	
 			 }
 						
