@@ -195,7 +195,7 @@ client.on("message", (message) => {
 												let huggedUser = message.mentions.users.first();
           							  if(message.mentions.users.size < 1) return message.reply("You forgot to mention someone to hug!");
            										 message.reply( "hugged " + huggedUser);
-												});
+												} else
 												// LIMITED EDITION COMMANDS
 										if (message.content.startsWith(prefix + "fuck")) {
 												 message.reply("HEY, NO FUCKING SWEARING IN THIS FUCKING SERVER GODDAMMIT!");
