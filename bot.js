@@ -168,10 +168,8 @@ client.on("message", (message) => {
           						          title: "Currently in latest version.",
         						          description: "(Version " + version + ")",
             }});
-								 } else
-									 if (message.content.startsWith
+			 }
 						
-		}
 });
 
 client.login(process.env.BOT_TOKEN);
