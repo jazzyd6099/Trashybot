@@ -183,7 +183,9 @@ client.on("message", (message) => {
 												let huggedUser = message.mentions.users.first();
 				
           							  if(message.mentions.users.size < 1) return message.reply("You forgot to mention someone to hug!");
-           										 message.reply( "hugged" + huggedUser);
+           										 message.reply( "hugged " + huggedUser ":thumbsup:");
+										} else
+											
 	
 			 }
 						
