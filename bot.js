@@ -28,24 +28,29 @@ var x = [
 
 var output = x[Math.floor(Math.random()*x.length)];
 
-var trashtalk = [
-  "Fuck off. Just fuck off.",
-  "Why are you alive, like bitch? :unamused:",
-  "Look at yourself hoe like tf??",
-  "WHO ARE YOU?? LMAOO",
-  "Peanut head looking ass LMFAO",
-  "Fucking bitch, you weirdass hoe.",
-  "BRUH LOOK AT YOUR HAIRLINE LMFAOOO :joy:",
-  "You're more retarded than Kaminari.",
-  "Your forehead is bigger than Jacksfilms' forehead.",
-  "You're fucking weird tf",
-  "Who put you on the planet??",
-  "You laugh too loud like stfu :joy: :joy:",
-  "You're a dumb bitch :joy:",
-  "By how much you swear, you put Bakugou's mouth to shame so shut the fuck up :joy:",
-  "Your voice is so weird :joy:",
-  "BOI YOU LOOK LIKE AN AVOCADO :joy:",
+var roast = [
+  "Damn, not you again.",
+  "You only annoy me when you’re breathing, really.",
+  "Jesus might love you, but everyone else definitely thinks you’re an idiot.",
+  "You’re about as useful as a screen door on a submarine.",
+  "People like you are the reason I’m on medication.",
+  "I believed in evolution until I met you.",
+  "Were you born this stupid or did you take lessons?",
+  "I am allergic to stupidity, so I break out in sarcasm.",
+  "Where's your off button?",
+  "I’d slap you but I don’t want to make your face look any better.",
+  "Hey, your village called, they want their idiot back.",
+  "I had a nightmare. I dreamed I was you.",
+  "Earth is full. Go home.",
+  "You swear so much, you put Bakugou's mouth to shame.",
+  "90% of your beauty could be removed with a Kleenex.",
+  "I’d tell you to go fuck yourself, but that would be cruel and unusual punishment.",
   "You're so inappropriate, I don't think you'll ever mature.",
+  "I'd give you a nasty look but you already got one.",
+  "If you're gonna be two-faced, atleast make one of them pretty.",
+  "The only way you’ll ever get laid is if you crawl up a chicken’s ass and wait.",
+  "If I wanted a bitch, I’d have bought a dog.",
+  "Your family tree must be a cactus because everyone on it is a prick.",
 ];
 
 var fortunes = [
@@ -96,6 +101,9 @@ client.on('guildMemberAdd', member => {
 	} else
 		if (message.content == "Who's TrashyBot?"){
 			message.channel.send("I'm a bot created by the server owner, Jazzyd6099(JazzyTheWeirdAdminlol) to keep watch of the server while the admins/the owner are off/AFK! I was also made for entertainment purposes so don't get any ideas. **I'm watching you.**");
+		} else
+			  if (message.isMentioned(client.user)) {
+    				message.reply("Oof.");
 	}
   });
 client.on("message", (message) => {
@@ -116,11 +124,11 @@ client.on("message", (message) => {
   			  message.channel.send("Cleared the messages.").then(message => message.delete(5000));
 			});
 				} else
-		  	if (message.content.startsWith(prefix + "trashtalk")) {
-			let trashtalkedUser = message.mentions.users.first();
+		  	if (message.content.startsWith(prefix + "roast")) {
+			let roastedUser = message.mentions.users.first();
 				
-            if(message.mentions.users.size < 1) return message.reply("You forgot to mention someone for me to trashtalk.");
-           		 message.channel.send( (trashtalk[Math.floor(Math.random() * trashtalk.length)]) + trashtalkedUser);
+            if(message.mentions.users.size < 1) return message.reply("You forgot to mention someone for me to roast.");
+           		 message.channel.send( (roast[Math.floor(Math.random() * roast.length)]) + roastedUser);
 			} else
 	  		if (message.content.startsWith(prefix + "turn back")) {
 		message.guild.member(client.user).setNickname('Trashy Bot');
