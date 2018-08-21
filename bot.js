@@ -4,7 +4,7 @@ const config = require("./config.json");
 const prefix = "!";
 const version = "BETA"
 
-const serverStats
+const serverStats = {
 	guildID: '474327703802347531',
 	totalUsersID: '481362960699097090',
 	MemberCountID: '481368806866944000',
