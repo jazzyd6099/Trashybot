@@ -4,6 +4,13 @@ const config = require("./config.json");
 const prefix = "!";
 const version = "BETA"
 
+const serverStats
+	guildID: '474327703802347531',
+	totalUsersID: '481362960699097090',
+	MemberCountID: '481368806866944000',
+	BotCountID: '481368923535704064',
+	
+};
 //embedColors
 
 const embedRed = 0xff0000
@@ -89,6 +96,21 @@ client.on('guildMemberAdd', member => {
 	    				title: "Welcome to the beta of Rainbow Planet.",
 	    				description: "If you want to know what I can do, go to the text channel; #bot-commands. Enjoy the discord server and have fun.",
     					}});
+client.on('guildMemberAdd', member => {
+	
+	if (member.guild.id !== serverStats.guildID) return;
+	
+	client.channels.get(serverStats.totalUsersID).setName('Total Users : ${member.guild.memberCount}'); // Total Users
+	client.chanmels.get(serverStats.memberCountID).setName('Member Count : ${member.guild.members.filter(m => !m.user.bot).size'); // Member Count(not including bots)
+	client.channels.get(serverStats.botCountID).setName('Bot Count : ${member.guild.members.filter(m => m.user.bot).size}'); // Bot Count
+});
+client.on('guildMemberRemove', member => {
+		if (member.guild.id !== serverStats.guildID) return;
+	
+	client.channels.get(serverStats.totalUsersID).setName('Total Users : ${member.guild.memberCount}'); // Total Users
+	client.chanmels.get(serverStats.memberCountID).setName('Member Count : ${member.guild.members.filter(m => !m.user.bot).size'); // Member Count(not including bots)
+	client.channels.get(serverStats.botCountID).setName('Bot Count : ${member.guild.members.filter(m => m.user.bot).size}'); // Bot Count
+});
 	
 	    const Member = member.guild.roles.find(`name`, `Member`)
     const Newbie = member.guild.roles.find(`name`, `Newbie`)
