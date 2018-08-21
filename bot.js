@@ -66,14 +66,11 @@ client.on('guildMemberAdd', member => {
 	if (talkedRecently.has(message.author.id))
   return;
 
-// Adds the user to the set so that they can't talk for 2.5 seconds
 talkedRecently.add(message.author.id);
 setTimeout(() => {
-	message.channel.send("You have been using the commands too much! Take a break.");
-  // Removes the user from the set after 2.5 seconds
   talkedRecently.delete(message.author.id);
 }, 2500);
-});
+		});
 	
 	    const Member = member.guild.roles.find(`name`, `Member`)
     const Newbie = member.guild.roles.find(`name`, `Newbie`)
