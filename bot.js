@@ -44,7 +44,7 @@ var trashtalk = [
   "You're a dumb bitch :joy:",
   "By how much you swear, you put Bakugou's mouth to shame so shut the fuck up :joy:",
   "Your voice is so weird :joy:",
-  "You're whiter than a cracker :joy:",
+  "BOI YOU LOOK LIKE AN AVOCADO :joy:",
   "You're so inappropriate, I don't think you'll ever mature.",
 ];
 
