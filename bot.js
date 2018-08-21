@@ -120,7 +120,7 @@ client.on("message", (message) => {
 			let trashtalkedUser = message.mentions.users.first();
 				
             if(message.mentions.users.size < 1) return message.reply("You forgot to mention someone for me to trashtalk.");
-            message.channel.send({embed: {
+           		 message.channel.send({embed: {
 		    		color: embedYellow,
 		    		title: "trashtalkedUser",
 		    		description: (fortunes[Math.floor(Math.random() * fortunes.length)]),
