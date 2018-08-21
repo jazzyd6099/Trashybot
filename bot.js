@@ -102,7 +102,7 @@ client.on('guildMemberAdd', member => {
 		if (message.content == "Who's TrashyBot?"){
 			message.channel.send("I'm a bot created by the server owner, Jazzyd6099(JazzyTheWeirdAdminlol) to keep watch of the server while the admins/the owner are off/AFK! I was also made for entertainment purposes so don't get any ideas. **I'm watching you.**");
 		} else
-			  if (message.content == "trashybot is so mean")) {
+			  if (message.content == "trashybot is so mean") {
     				message.reply("I'm sorry that my brutal honesty inconvenienced your ego.");
 	}
   });
