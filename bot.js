@@ -29,23 +29,23 @@ var x = [
 var output = x[Math.floor(Math.random()*x.length)];
 
 var trashtalk = [
-  "Fuck off. Just fuck off."
-  "Why are you alive, like bitch? :unamused:"
-  "Look at yourself hoe like tf??"
-  "WHO ARE YOU?? LMAOO"
-  "Peanut head looking ass LMFAO"
-  "Fucking bitch, you weirdass hoe."
-  "BRUH LOOK AT YOUR HAIRLINE LMFAOOO :joy:"
-  "You're more retarded than Kaminari."
-  "Your forehead is bigger than Jacksfilms' forehead."
-  "You're fucking weird tf"
-  "Who put you on the planet??"
-  "You laugh too loud like stfu :joy: :joy:"
-  "You're a dumb bitch :joy:"
-  "By how much you swear, you put Bakugou's mouth to shame so shut the fuck up :joy:"
-  "Your voice is so weird :joy:"
-  "You're whiter than a cracker :joy:"
-  "You're so inappropriate, I don't think you'll ever mature."
+  "Fuck off. Just fuck off.",
+  "Why are you alive, like bitch? :unamused:",
+  "Look at yourself hoe like tf??",
+  "WHO ARE YOU?? LMAOO",
+  "Peanut head looking ass LMFAO",
+  "Fucking bitch, you weirdass hoe.",
+  "BRUH LOOK AT YOUR HAIRLINE LMFAOOO :joy:",
+  "You're more retarded than Kaminari.",
+  "Your forehead is bigger than Jacksfilms' forehead.",
+  "You're fucking weird tf",
+  "Who put you on the planet??",
+  "You laugh too loud like stfu :joy: :joy:",
+  "You're a dumb bitch :joy:",
+  "By how much you swear, you put Bakugou's mouth to shame so shut the fuck up :joy:",
+  "Your voice is so weird :joy:",
+  "You're whiter than a cracker :joy:",
+  "You're so inappropriate, I don't think you'll ever mature.",
 ];
 
 var fortunes = [
