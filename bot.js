@@ -198,7 +198,7 @@ client.on("message", (message) => {
 												} else
 												// LIMITED EDITION COMMANDS
 										if (message.content.startsWith(prefix + "fuck")) {
-												 message.reply("HEY, NO FUCKING SWEARING IN THIS FUCKING SERVER GODDAMMIT!");
+												 message.channel.send("HEY, NO FUCKING SWEARING IN THIS FUCKING SERVER GODDAMMIT!");
 	
 			 }
 						
