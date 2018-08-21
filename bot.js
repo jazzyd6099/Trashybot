@@ -86,7 +86,7 @@ client.on("ready", () => {
 client.on('guildMemberAdd', member => {
     member.guild.channels.get('474327704280367154').send({embed: {
 	    				color: embedWhite,
-	    				title: "Welcome to Rainbow Planet.",
+	    				title: "Welcome to the beta of Rainbow Planet.",
 	    				description: "If you want to know what I can do, go to the text channel; #bot-commands. Enjoy the discord server and have fun.",
     					}});
 	
