@@ -121,7 +121,6 @@ client.on("message", (message) => {
 				
             if(message.mentions.users.size < 1) return message.reply("You forgot to mention someone for me to trashtalk.");
            		 message.channel.send( (trashtalk[Math.floor(Math.random() * trashtalk.length)]) + trashtalkedUser);
-	    }});
 			} else
 	  		if (message.content.startsWith(prefix + "turn back")) {
 		message.guild.member(client.user).setNickname('Trashy Bot');
