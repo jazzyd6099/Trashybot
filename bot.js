@@ -138,7 +138,7 @@ client.on("message", (message) => {
 	    				description: "If you want to know what I can do, go to the text channel; #bot-commands. Enjoy the discord server and have fun.",
     					}});
 							 } else
-								 if (message.content == "info"){
+								 if (message.content.startsWith(prefix + "info")) {
 								  message.channel.send({embed: {
            						 	  color: 0xf50107,
           						          title: "Currently in latest version.",
