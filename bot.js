@@ -74,7 +74,7 @@ var fortunes = [
 client.on("ready", () => {
   console.log("I am ready to be a trashy ass bot.");
 	
-	client.user.setPresence({ game: { name: 'Trashass' }, status: 'dnd' })
+	client.user.setPresence({ game: { name: 'With you bc I was coded for it.' }, status: 'dnd' })
   .then(console.log)
   .catch(console.error);
 	});
