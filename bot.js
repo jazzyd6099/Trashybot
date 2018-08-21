@@ -104,6 +104,9 @@ client.on('guildMemberAdd', member => {
 		} else
 			  if (message.content == "trashybot is so mean") {
     				message.reply("I'm sorry that my brutal honesty inconvenienced your ego.");
+			  } else
+				  if (message.content == "Hewwo, i'm Twashybwot. It's noice to mweet you >w<") {
+					  message.channel.send("I want to fucking die now.");
 	}
   });
 client.on("message", (message) => {
@@ -172,6 +175,16 @@ client.on("message", (message) => {
           						          title: "Currently in latest version.",
         						          description: "(Version " + version + ")",
             }});
+								 } else
+									 if (message.content.startsWith(prefix + "emojify")) {
+										 message.channel.send("Hewwo, i'm Twashybwot. It's noice to mweet you >w<");
+									 } else
+										 		if (message.content.startsWith(prefix + "hug")) {
+												let huggedUser = message.mentions.users.first();
+				
+          							  if(message.mentions.users.size < 1) return message.reply("You forgot to mention someone to hug!");
+           										 message.reply( "hugged" + huggedUser);
+	
 			 }
 						
 });
