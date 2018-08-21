@@ -120,7 +120,7 @@ client.on("message", (message) => {
 			let trashtalkedUser = message.mentions.users.first();
 				
             if(message.mentions.users.size < 1) return message.reply("You forgot to mention someone for me to trashtalk.");
-           		 message.channel.send(trashtalk[Math.floor(Math.random() * trashtalk.length)]) + trashtalkedUser);
+           		 message.channel.send( (trashtalk[Math.floor(Math.random() * trashtalk.length)]) + trashtalkedUser);
 	    }});
 			} else
 	  		if (message.content.startsWith(prefix + "turn back")) {
