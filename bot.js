@@ -28,6 +28,26 @@ var x = [
 
 var output = x[Math.floor(Math.random()*x.length)];
 
+var trashtalk = [
+  "Fuck off. Just fuck off."
+  "Why are you alive, like bitch? :unamused:"
+  "Look at yourself hoe like tf??"
+  "WHO ARE YOU?? LMAOO"
+  "Peanut head looking ass LMFAO"
+  "Fucking bitch, you weirdass hoe."
+  "BRUH LOOK AT YOUR HAIRLINE LMFAOOO :joy:"
+  "You're more retarded than Kaminari."
+  "Your forehead is bigger than Jacksfilms' forehead."
+  "You're fucking weird tf"
+  "Who put you on the planet??"
+  "You laugh too loud like stfu :joy: :joy:"
+  "You're a dumb bitch :joy:"
+  "By how much you swear, you put Bakugou's mouth to shame so shut the fuck up :joy:"
+  "Your voice is so weird :joy:"
+  "You're whiter than a cracker :joy:"
+  "You're so inappropriate, I don't think you'll ever mature."
+];
+
 var fortunes = [
     "Yes.",
     "It is certain.",
@@ -93,14 +113,18 @@ client.on("message", (message) => {
 			  if (isNaN(args[0])) return message.channel.send("Please supply a valid amount to clear messages.");
 			  if (args[0] > 100) return message.channel.send("Supply an amount less than 100!");
 			  	message.channel.bulkDelete(args[0]).then(() => {
-  			  message.channel.send("Cleared those dirtyass messages.").then(message => message.delete(5000));
+  			  message.channel.send("Cleared the messages.").then(message => message.delete(5000));
 			});
 				} else
 		  	if (message.content.startsWith(prefix + "trashtalk")) {
 			let trashtalkedUser = message.mentions.users.first();
 				
             if(message.mentions.users.size < 1) return message.reply("You forgot to mention someone for me to trashtalk.");
-            message.channel.send("Fucking bitch, you weirdass hoe. :unamused:" + trashtalkedUser);
+            message.channel.send({embed: {
+		    		color: embedYellow,
+		    		title: trashtalkedUser,
+		    		description: (fortunes[Math.floor(Math.random() * fortunes.length)]),
+	    }});
 			} else
 	  		if (message.content.startsWith(prefix + "turn back")) {
 		message.guild.member(client.user).setNickname('Trashy Bot');
@@ -144,6 +168,8 @@ client.on("message", (message) => {
           						          title: "Currently in latest version.",
         						          description: "(Version " + version + ")",
             }});
+								 } else
+									 if (message.content.startsWith
 						
 		}
 });
