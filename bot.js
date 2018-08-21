@@ -126,6 +126,7 @@ client.on("message", (message) => {
 					 } else
 						 if (message.content.startsWith(prefix + "hi")) {
 							 message.reply("Hello.");
+						 } else
 							 if (message.content.startsWith(prefix + "welcome test")) {
 								 message.channel.send({embed: {
 	    				color: embedWhite,
