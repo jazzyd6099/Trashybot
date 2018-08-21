@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./config.json");
+const prefix = "!";
 
 //embedColors
 
@@ -73,10 +74,9 @@ client.on('guildMemberAdd', member => {
 		message.channel.send("No, i'm trash.")
 	} else
 		if (message.content == "Who's TrashyBot?"){
-			message.channel.send("I'm a bot created by the server owner, Jazzyd6099(JazzyTheWeirdAdminlol) to keep watch of the server while the admins/the owner are off/AFK! I was also made for entertainment purposes so don't get any ideas. **I'm watching you.**.");
+			message.channel.send("I'm a bot created by the server owner, Jazzyd6099(JazzyTheWeirdAdminlol) to keep watch of the server while the admins/the owner are off/AFK! I was also made for entertainment purposes so don't get any ideas. **I'm watching you.**");
 	}
   });
-const prefix = "!";
 client.on("message", (message) => {
   if (message.author.bot) return;
    if (message.content.indexOf(config.prefix) !== 0) return;
