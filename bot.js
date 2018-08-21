@@ -122,7 +122,7 @@ client.on("message", (message) => {
             if(message.mentions.users.size < 1) return message.reply("You forgot to mention someone for me to trashtalk.");
            		 message.channel.send({embed: {
 		    		color: embedYellow,
-		    		title: trashtalkedUser,
+		    		title: + trashtalkedUser,
 		    		description: (trashtalk[Math.floor(Math.random() * trashtalk.length)]),
 	    }});
 			} else
