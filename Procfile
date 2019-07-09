@@ -1,2 +1,2 @@
-web: node dist/server/index.js
+web: node ./index.js
 worker: node bot.js
